@@ -1,42 +1,195 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Header*/
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav ul li {
+  margin: 0 1.5rem;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #f39c12;
+}
+
+/*Hero*/
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  perspective: 1000px;
+}
+
+.hero-content {
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.hero-title {
+  font-size: 4rem;
+  transform: rotateY(20deg);
+  transition: transform 2s;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  margin-top: 1rem;
+  transform: rotateY(-20deg);
+}
+
+.hero-content:hover .hero-title,
+.hero-content:hover .hero-subtitle {
+  transform: rotateY(0deg);
+}
+
+/*About*/
+.about {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.about-card {
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-card:hover {
+  transform: rotateY(10deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/*Projects*/
+.projects {
+  padding: 5rem 0;
+  background-color: #f0f0f0;
+  text-align: center;
 }
 
-.card {
-  padding: 2em;
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.project-card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
 }
+
+.project-card .front,
+.project-card .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card .back {
+  transform: rotateY(180deg);
+}
+
+.project-card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.project-card:hover .back {
+  transform: rotateY(360deg);
+}
+
+/*Contact*/
+.contact {
+  padding: 5rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contact input, .contact textarea {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+  transform: translateY(-5px);
+}
+
+.contact button {
+  padding: 1rem 2rem;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/*Footer*/
+.footer {
+  padding: 2rem 0;
+  background-color: #282c34;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  margin: 0 1rem;
+  color: #f39c12;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+
+
+
+
